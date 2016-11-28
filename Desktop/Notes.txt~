@@ -1,0 +1,329 @@
+600002167395
+
+http://ia802706.us.archive.org/6/items/MIT6.006F11/MIT6_006F11_lec01_300k.mp4
+90ViySaxo
+
+Pr@d33p!009
+fri@123
+
+
+timesatmp - 1456732013
+
+*/5 * * * * /usr/bin/php /home/shopclue/admin/tools/evoker.php
+
+
+ps -ef | grep skype | awk '{print $2}'| xargs  kill -9
+
+
+******************************************
+
+http://acepayxpress.com/eHRMS/Login.aspx?Cmp=CLUES
+
+access_token :=>  'e8ec82e4f57d9b206d695383d0b0cabc2541fc9d'
+
+
+Login Name:pankaj.goyal
+
+Password: 3Qd9WY0N
+
+***********************************************PFT API **************************************************************
+
+Const URl1 As String = "http://www.shopclues.com/api/v5/cat_leaf_features?key=d12121c70dda5edfgd1df6633fdb36c0"
+Const URL2 As String = "http://api.shopclues.com/api/v5/cat_features?key=d12121c70dda5edfgd1df6633fdb36c0"
+Const URL3 As String = "http://www.shopclues.com/api/v5/cat_category_tree?key=d12121c70dda5edfgd1df6633fdb36c0"
+Const URL4 As String = "http://www.shopclues.com/api/v5/cat_categories?key=d12121c70dda5edfgd1df6633fdb36c0"
+Const URL5 As String = "http://www.shopclues.com/api/v5/cat_options?key=d12121c70dda5edfgd1df6633fdb36c0"
+Const URL6 As String = "http://www.shopclues.com/api/v5/cat_leaf_options?key=d12121c70dda5edfgd1df6633fdb36c0"
+
+************************************************CONFIG ADMIN********************************************************
+$config['add_order_email_to_rmq']=true;
+
+$config['category_tree_query_condition']=true;
+
+
+$config['DOMAIN_MODULE_THRESHOLD_LOG_LEVEL'] =
+array(
+'billing' =>
+array('billing_adjustment' => $config['LOG_LEVELS']['ERROR'],
+'clues_billing_payout_summary' => $config['LOG_LEVELS']['ERROR'],
+            
+),
+'communication' =>
+array('email' => $config['LOG_LEVELS']['INFO'],
+            'sms' => $config['LOG_LEVELS']['CRITICAL'],
+        'consolidated_cron' => $config['LOG_LEVELS']['INFO'],
+              'consolidated_emails' => $config['LOG_LEVELS']['CRITICAL'],
+              'merchant_communication_email' => $config['LOG_LEVELS']['CRITICAL'],
+              'order_sms' => $config['LOG_LEVELS']['CRITICAL'],
+              'order_emails' => $config['LOG_LEVELS']['CRITICAL'],
+              'template_sms' => $config['LOG_LEVELS']['CRITICAL'],
+              'template_mail' => $config['LOG_LEVELS']['CRITICAL'],
+              'return_emails' => $config['LOG_LEVELS']['CRITICAL'], 
+                'ivr' => $config['LOG_LEVELS']['INFO']
+),
+'storemanager' =>
+array('login' => $config['LOG_LEVELS']['INFO'],
+            'return' => $config['LOG_LEVELS']['CRITICAL'],
+            'promotion' => $config['LOG_LEVELS']['ERROR'],
+        'communication' => $config['LOG_LEVELS']['CRITICAL']
+),
+'catalog' =>
+        array('login' => $config['LOG_LEVELS']['INFO'],
+            'return' => $config['LOG_LEVELS']['CRITICAL'],
+            'product' => $config['LOG_LEVELS']['INFO'],
+            'validation' => $config['LOG_LEVELS']['CRITICAL']
+        ),
+'checkout' =>
+        array('payment' => $config['LOG_LEVELS']['CRITICAL'],
+            'step1' => $config['LOG_LEVELS']['INFO'],
+            'step2' => $config['LOG_LEVELS']['INFO']
+        ),
+'cs' =>
+        array('order' => $config['LOG_LEVELS']['ERROR'],
+         'edd' => $config['LOG_LEVELS']['CRITICAL']
+       ),
+'soa' =>
+    array('product' => $config['LOG_LEVELS']['CRITICAL'],
+        'merchant' => $config['LOG_LEVELS']['INFO'],
+        'registeration' => $config['LOG_LEVELS']['INFO']
+    ),
+'coresystem' =>
+    array('mysql' => $config['LOG_LEVELS']['CRITICAL'],
+     'memcache' => $config['LOG_LEVELS']['ERROR'],
+     'mongo' => $config['LOG_LEVELS']['ERROR'],
+     'solr' => $config['LOG_LEVELS']['ERROR']
+    ),
+'ff' =>
+    array('bulk_order_status_change_consumer' => $config['LOG_LEVELS']['CRITICAL'],
+        'milk_run_initiate_panel' => $config['LOG_LEVELS']['CRITICAL'],
+     'manifest' => $config['LOG_LEVELS']['CRITICAL'],
+        'milk_run_initiate_panel' => $config['LOG_LEVELS']['CRITICAL'],
+        'milk_run_distribution_panel' => $config['LOG_LEVELS']['CRITICAL'],
+        'milk_run_manifest' => $config['LOG_LEVELS']['CRITICAL'],
+         'bulk_order_status' => $config['LOG_LEVELS']['CRITICAL'],
+          'order' => $config['LOG_LEVELS']['INFO']
+    ),
+'search' =>
+    array('solr_select' => $config['LOG_LEVELS']['ERROR'],
+    	'solr_update' =>$config['LOG_LEVELS']['ERROR'],
+    	'Zettata_import'=>$config['LOG_LEVELS']['ERROR']
+    ),
+'admin' =>
+    array('logout' => $config['LOG_LEVELS']['ERROR'],
+        'login' => $config['LOG_LEVELS']['ERROR'],
+        'oops' => $config['LOG_LEVELS']['CRITICAL'],
+        'mongo_connection' => $config['LOG_LEVELS']['ERROR'],
+        'Catalog'=>$config['LOG_LEVELS']['ERROR']
+    ),
+'marketing' =>
+    array('promotion' => $config['LOG_LEVELS']['CRITICAL']
+    ),
+);
+
+**********************************************************************************************************************
+
+clues_url_clone_history ---------------------> for clone product history
+
+
+********************************************productupload api******************************************************
+
+=>     api log table
+			clues_api_log
+=>     JSON
+			{
+			    "product_code": 6505124,
+			    "merchant_reference_code": "ABC174771",
+			    "committed_quantity": 65,
+			    "selling_price": 7895,
+			    "MRP": 1000,
+			    "shipping_cost": 0,
+			    "user_id": 465643,
+			    "token": "ff6c7173f0d49e52f0d067f41874dab552c1837ee54036699039cac5c2768769",
+			    "timestamp":1448619154,
+			    "MID":4842,
+			    "key": "d12121c70dda5edfgd1df6633fdb36c0",
+			    "catalog_type" : 1
+			}
+
+=>		Token Generation
+			$message = $this->Key.$this->UserId.$this->Timestamp.$this->CompanyId;
+        
+        $password = db_get_field("SELECT password FROM cscart_users WHERE status='A' AND user_id = ".$this->UserId);
+        
+         $hmac = hash_hmac ($this->Algo,$message,$password,false);
+       
+         return $hmac;
+
+         d12121c70dda5edfgd1df6633fdb36c046564314486196252395
+
+
+********************************************************************************************************************************
+thumbnail_check_front_consumer_on
+
+
+cdn_all_images_checking
+cdn_all_images_checking_bulk_product
+
+
+
+***************************************************************************************************************************************
+<tomcat-users>
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <role rolename="admin-gui"/>
+  <role rolename="admin-script"/>
+  <user username="admin" password="s48clues" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/>
+</tomcat-users>
+
+***************************************************************CIC-741*****************************************************************************
+
+CREATE TABLE `clues_duplicate_products` (
+  `id` bigint(21) NOT NULL AUTO_INCREMENT,
+  `product_id` bigint(21) unsigned NOT NULL,
+  `merchant_id` bigint(21) unsigned NOT NULL,
+  `reference_prdouct_id` bigint(21) unsigned,
+  `error` text,
+  PRIMARY KEY (`id`)
+);
+
+
+alter table clues_catalog_process_engine add (counterfeit_image_flag tinyint(1) default 2,counterfeit_image_error text);
+
+ALTER TABLE clues_catalog_process_engine  ALTER column counterfeit_flag  SET DEFAULT 2;
+ALTER TABLE clues_catalog_process_engine  ALTER column excessive_shipping_flag  SET DEFAULT 2;
+ALTER TABLE clues_catalog_process_engine  ALTER column duplicate_flag  SET DEFAULT 2;
+ALTER TABLE clues_catalog_process_engine  ALTER column business_logic_flag  SET DEFAULT 2;
+ALTER TABLE clues_catalog_process_engine  ALTER column image_flag  SET DEFAULT 2;
+
+alter table clues_mdsum_data_images add column keyword_id text;
+
+
+
+aqa2.shopclues.com/amqplib/clues/catalog_image_validation.php
+aqa2.shopclues.com/amqplib/clues/catalog_counterfeit_validation.php
+aqa2.shopclues.com/amqplib/clues/catalog_duplicate_product_validation.php
+aqa2.shopclues.com/amqplib/clues/catalog_shipping_validation.php
+aqa2.shopclues.com/amqplib/clues/upload_business_rule_validation_consumer.php
+
+aqa2.shopclues.com/amqplib/clues/catalog_product_assignee.php
+
+aqa2.shopclues.com/amqplib/clues/catalog_create_product.php 
+aqa2.shopclues.com/amqplib/clues/catalog_update_product_consumer.php
+
+aqa2.shopclues.com/amqplib/clues/front_image_generate_cosumer.php
+
+
+consumer_catalog_image_validation.php
+consumer_catalog_counterfeit_validation.php
+consumer_catalog_duplicate_product_validation.php
+consumer_catalog_shipping_validation.php
+upload_business_rule_validation.php
+consumer_catalog_create_product.php
+catalog_update_product.php
+
+<FilesMatch "(consumer_catalog_image_validation.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+
+
+<FilesMatch "(consumer_catalog_counterfeit_validation.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+
+<FilesMatch "(consumer_catalog_duplicate_product_validation.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+
+<FilesMatch "(consumer_catalog_shipping_validation.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+
+<FilesMatch "(upload_business_rule_validation.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+
+<FilesMatch "(consumer_catalog_create_product.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+
+<FilesMatch "(catalog_update_product.php)">
+Allow from all
+Satisfy any
+</FilesMatch>
+*********************************************************************************************************************************************
+26860-26864
+
+http://svn:8080/svn/admin/branches/cat-583new
+
+
+bulk_upload_product_entry.php
+controllers/admin/products.php
+core/fn.catalog.php
+tools/bulk_upload_entry.php
+tools/check_product_images.php
+tools/consumer_front_image_generate.php
+
+
+
+select distinct(l.product_id) from clues_image_generate_log l inner join cscart_products p 
+on p.product_id=l.product_id and p.status!='X' where  l.type='Consumer' and l.detailed_path like 'No%';
+
+
+
+
+
+
+
+********************************************************************************************************************************
+
+http://api.shopclues.com/api/v9/unbxdapi?uid=uid-1456398330094-84892&boxType=ALSO_VIEWED&pid=1834646&key=d72121c70dda5edfgd1df6633fdb36c0
+
+
+
+
+http://api.shopclues.com/api/v9/unbxdapi?uid=uid-1456398330094-84892&boxType=ALSO_BOUGHT&pid=1834646&key=d72121c70dda5edfgd1df6633fdb36c0
+
+
+
+
+
+
+
+
+
+***********************************************************************************
+
+
+sudo gedit /etc/NetworkManager/system-connections/Hotspot
+
+
+89811500
+
+
+He is good technically, understands and executes tasks independently.
+
+
+
+**********************************************************************************************
+
+
+ public function leaf_category_path(){
+        $leaf_category_sql_result= array_values($this->get_leaf_categories());
+        foreach($leaf_category_sql_result as $key=>$value){
+                $category_path['category_path'][$key]['category_id'] = $value['category_id'];
+                $category_path['category_path'][$key]['category_path'] = str_replace("///"," >> ",str_replace(",","-",$value['category_path']));
+        //      $category_path['category_path'][$key]['meta_keywords'] = str_replace(",","-",$value['meta_keywords']);
+        }
+        $this->response($this->json($category_path), 200);
+     }
+
+
+
