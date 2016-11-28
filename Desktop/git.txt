@@ -33,4 +33,5 @@
 28) git diff --staged								show what changes will be comitted
 29) git diff --unstaged							   shows previous changes
 30) git diff HEAD                                  shows all changes done till now
-31) 
+31) git rebase master
+32) git rebase  --continue                       after resolving conflicts
