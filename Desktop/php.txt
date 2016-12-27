@@ -1,2 +1,0 @@
-Favour composition over inheritance
-use interface instead of implementation
