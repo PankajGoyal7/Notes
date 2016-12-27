@@ -1,0 +1,12 @@
+
+*******************************************Elastic Search**************************************************
+
+Chapter 1
+----------
+
+ElasticSearch can be used both as a search engine and as a data store.
+Node:- Every instance of ElasticSearch is called as node.
+Cluster:- Several nodes are grouped in a cluster.
+Configuration file is "elasticsearch.yml".
+
+
