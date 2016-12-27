@@ -1,0 +1,201 @@
+
+======================================== START ===================================================
+
+Introduction:
+------------
+
+	Node.js processes user requests differently when compared to a traditional web server model. Node.js runs in a single process and the application code runs in a single thread and thereby needs less resources than other platforms.
+
+	An event loop is constantly watching for the events to be raised for an asynchronous job and executing callback function when the job completes. Internally, Node.js uses "libev" for the event loop which in turn uses internal C++ thread pool to provide asynchronous I/O.
+
+	Node.js process model increases the performance and scalability with a few caveats. Node.js is not fit for an application which performs CPU-intensive operations like image processing or other heavy computation work because it takes time to process a request and thereby blocks the single thread.
+
+Set up development environment :
+-------------------------------
+	
+	Node.js development environment can be setup in Windows, Mac, Linux and Solaris. The following tools/SDK are required for developing a Node.js application on any platform.
+
+		Node.js
+		Node Package Manager (NPM)
+		IDE (Integrated Development Environment) or TextEditor
+
+	Node.js comes with virtual environment called REPL (aka Node shell). REPL stands for Read-Eval-Print-Loop
+
+NodeJs Basics :
+--------------
+
+	Node.js includes an additional data type called Buffer (not available in browser's JavaScript). Buffer is mainly used to store binary data, while reading from a file or receiving packets over the network.
+
+	Check node running node process of application : process.execPath 
+
+	Defaults to local:
+
+		Node's JavaScript is different from browser's JavaScript when it comes to global scope. In the browser's JavaScript, variables declared without var keyword become global. In Node.js, everything becomes local by default.
+
+
+Node.js Module:
+---------------
+
+	Module in Node.js is a simple or complex functionality organized in single or multiple JavaScript files which can be reused throughout the Node.js application.
+
+	Each module in Node.js has its own context, so it cannot interfere with other modules or pollute global scope. Also, each module can be placed in a separate .js file under a separate folder.
+
+	Module Types:
+			
+		Node.js includes three types of modules:
+
+			Core Modules
+			Local Modules
+			Third Party Modules
+
+		Node.js Core Modules:
+
+			Node.js is a light weight framework. The core modules include bare minimum functionalities of Node.js. These core modules are compiled into its binary distribution and load automatically when Node.js process starts. However, you need to import the core module first in order to use it in your application.
+
+			like http,url,querystring,path,fs,util
+
+		Local Modules:
+
+			Modules which are written by developer for it's use.you can also distribute it via NPM so that other can also use you modules.
+
+
+NodeJs File System:
+-------------------
+
+	Node.js includes fs module to access physical file system. The fs module is responsible for all the asynchronous or synchronous file I/O operations.
+
+
+	Important method of fs module:
+
+	Method	Description
+
+		fs.readFile(fileName [,options], callback)	Reads existing file.
+
+		fs.writeFile(filename, data[, options], callback)	Writes to the file. If file exists then overwrite the content otherwise creates new file.
+
+		fs.open(path, flags[, mode], callback)	Opens file for reading or writing.
+
+		fs.rename(oldPath, newPath, callback)	Renames an existing file.
+
+		fs.chown(path, uid, gid, callback)	Asynchronous chown.
+
+		fs.stat(path, callback)	Returns fs.stat object which includes important file statistics.
+
+		fs.link(srcpath, dstpath, callback)	Links file asynchronously.
+
+		fs.symlink(destination, path[, type], callback)	Symlink asynchronously.
+
+		fs.rmdir(path, callback)	Renames an existing directory.
+
+		fs.mkdir(path[, mode], callback)	Creates a new directory.
+
+		fs.readdir(path, callback)	Reads the content of the specified directory.
+
+		fs.utimes(path, atime, mtime, callback)	Changes the timestamp of the file.
+
+		fs.exists(path, callback)	Determines whether the specified file exists or not.
+
+		fs.access(path[, mode], callback)	Tests a user's permissions for the specified file.
+
+		fs.appendFile(file, data[, options], callback)	Appends new content to the existing file.
+	
+	
+NodeJs Debugging:
+------------------
+
+	1. using debugger in code and run "node debug <filename>"
+	2. Using node-inspector 
+		npm install -g node-inspector
+		node-inspector --web-port=5500
+		node --debug-brk app.js
+		Refresh the browser and you will see that it stops at the first line of the program as shown below.
+
+Node.js EventEmitter:
+--------------------
+	
+	Common Patterns for EventEmitters:
+
+		There are two common patterns that can be used to raise and bind an event using EventEmitter class in Node.js.
+
+		1 Return EventEmitter from a function
+		2 Extend the EventEmitter class
+
+		1. Example
+
+			var emitter = require('events').EventEmitter;
+
+			function LoopProcessor(num) {
+			    var e = new emitter();
+			    
+			    setTimeout(function () {
+			        
+			        for (var i = 1; i <= num; i++) {
+			            e.emit('BeforeProcess', i);
+			            
+			            console.log('Processing number:' + i);
+			            
+			            e.emit('AfterProcess', i);
+			        }
+			    }
+			    , 2000)
+			    
+			    return e;
+			}
+			var lp = LoopProcessor(3);
+
+			lp.on('BeforeProcess', function (data) {
+			    console.log('About to start the process for ' + data);
+			});
+
+			lp.on('AfterProcess', function (data) {
+			    console.log('Completed processing ' + data);
+			});
+
+		2. Example
+
+			var emitter = require('events').EventEmitter;
+
+			var util = require('util');
+
+			function LoopProcessor(num) {
+			    var me = this;
+
+			    setTimeout(function () {
+			        
+			        for (var i = 1; i <= num; i++) {
+			            me.emit('BeforeProcess', i);
+			            
+			            console.log('Processing number:' + i);
+			            
+			            me.emit('AfterProcess', i);
+			        }
+			    }
+			    , 2000)
+			        
+			    return this; 
+			}
+
+			util.inherits(LoopProcessor, emitter)
+
+			var lp = new LoopProcessor(3);
+
+			lp.on('BeforeProcess', function (data) {
+			    console.log('About to start the process for ' + data);
+			});
+
+			lp.on('AfterProcess', function (data) {
+			    console.log('Completed processing ' + data);
+			});
+
+GruntJs:
+------
+	GruntJS includes plugins for various tasks. For example, nodemon plugin automatically restarts the node server whenever any JavaScript file changes in your application. So, you don't have to stop and restart the node server manually everytime you modify JavaScript. The grunt-contrib-cssmin plugin can be used to compress CSS files. The grunt-jsfmt plugin can be used to format, search or rewrite the JavaScript in your application.
+
+	 npm install -g grunt-cli
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+
+*******************************************Elastic Search**************************************************
+
+Chapter 1
+----------
+
+ElasticSearch can be used both as a search engine and as a data store.
+Node:- Every instance of ElasticSearch is called as node.
+Cluster:- Several nodes are grouped in a cluster.
+Configuration file is "elasticsearch.yml".
+
+There are two important behaviors in an ElasticSearch node, namely the "arbiter" and the "data container".
+Arbiter node :- is used to process data and return final response.
+Data node :- is used to store data.They contain the indices shards that store the indexed documents as Lucene indices.
+             All the standard nodes are both arbiter and data container.
+
+Main data container is called index(plural indices) and it can be considered as a database in the traditional SQL world.In an index, the data is grouped in data types called mappings in ElasticSearch. A mapping describes how the records are composed (called fields)
+
